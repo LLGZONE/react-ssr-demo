@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ReactElement } from 'react';
 import Loadable from 'react-loadable';
 import { ServerLocation } from '@reach/router';
 

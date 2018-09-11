@@ -2,5 +2,9 @@
   "index.js": "//127.0.0.1:3330/static/index.js",
   "index.css": "//127.0.0.1:3330/static/index.css",
   "index.js.map": "//127.0.0.1:3330/static/index.js.map",
-  "index.css.map": "//127.0.0.1:3330/static/index.css.map"
+  "index.css.map": "//127.0.0.1:3330/static/index.css.map",
+  "chunk.0.js": "//127.0.0.1:3330/static/chunk.0.js",
+  "chunk.0.js.map": "//127.0.0.1:3330/static/chunk.0.js.map",
+  "chunk.1.js": "//127.0.0.1:3330/static/chunk.1.js",
+  "chunk.1.js.map": "//127.0.0.1:3330/static/chunk.1.js.map"
 }

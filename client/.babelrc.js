@@ -1,26 +1,21 @@
 module.exports = api => {
-  api.cache(true);
+  const env = api.env();
+
   return {
     presets: [
       [
         '@babel/env',
         {
           targets: {
-            node: 'current'
+            browsers: ['last 2 versions']
           }
         }
       ],
       '@babel/react',
-      [
-        '@babel/preset-typescript',
-        {
-          isTSX: true,
-          allExtensions: true
-        }
-      ]
+      '@babel/typescript'
     ],
     plugins: [
-      'dynamic-import-node',
+      '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-class-properties',
       [
         'babel-plugin-module-resolver',

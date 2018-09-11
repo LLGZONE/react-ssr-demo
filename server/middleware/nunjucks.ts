@@ -18,14 +18,20 @@ export default (config: NunjucksConfig) => {
       configureEnvironment: (env: any) => {
         function getScripts(page: string, prefetchJs = []) {
           const safe = env.filters.safe;
-          const jsArr = [...prefetchJs, `${page}.js`].map(x => manifest[x]);
-          return safe(jsArr.map(src => `<script src="${src}"></script>\n`));
+          const scripts = [...prefetchJs, `${page}.js`].map(x => manifest[x]);
+          return safe(
+            scripts
+              .map(script => `<script src="${script}"></script>`)
+              .join('\n')
+          );
         }
         function getCSSLink(page: string, prefetchCSS = []) {
           const safe = env.filters.safe;
-          const jsArr = [...prefetchCSS, `${page}.css`].map(x => manifest[x]);
+          const styles = [...prefetchCSS, `${page}.css`].map(x => manifest[x]);
           return safe(
-            jsArr.map(src => `<Link rel="stylesheet" href="${src}" />\n`)
+            styles
+              .map(style => `<Link rel="stylesheet" href="${style}" />`)
+              .join('\n')
           );
         }
 

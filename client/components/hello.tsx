@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './hello.less';
+import './hello2.less';
 import { RouteComponentProps } from '@reach/router';
 
 class Hello extends React.Component<RouteComponentProps> {

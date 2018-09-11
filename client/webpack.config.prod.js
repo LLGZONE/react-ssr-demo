@@ -10,7 +10,7 @@ module.exports = merge(baseConfig, {
     chunkFilename: 'chunk.[name].[chunkhash].js'
   },
   plugins: [
-    new cleanWebpackPlugin('dist/client'),
+    new cleanWebpackPlugin('./server/public/'),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')

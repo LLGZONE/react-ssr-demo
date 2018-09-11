@@ -42,12 +42,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      allChunks: true
+    })
+  ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
-    alias: {
-      style: path.resolve(__dirname, 'style'),
-      img: path.resolve(__dirname, 'assets/img'),
-      fonts: path.resolve(__dirname, 'assets/fonts')
-    }
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json']
   }
 };
